@@ -1,0 +1,308 @@
+#VRML_SIM R2025a utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/floors/protos/RectangleArena.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/appearances/protos/SandyGround.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/robots/adept/pioneer3/protos/Pioneer3at.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/road/protos/StraightRoadSegment.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/trees/protos/SimpleTree.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/buildings/protos/TheThreeTowers.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/buildings/protos/CommercialBuilding.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/buildings/protos/BuildingUnderConstruction.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/trees/protos/Forest.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/road/protos/Roundabout.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/street_furniture/protos/Bench.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/road/protos/CurvedRoadSegment.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/buildings/protos/Museum.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/vehicles/protos/bmw/BmwX5Simple.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/samples/contests/robocup/protos/RobocupSoccerField.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/humans/pedestrian/protos/Pedestrian.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/advertising_board/protos/AdvertisingBoard.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/vehicles/protos/generic/Tractor.proto"
+
+WorldInfo {
+  info [
+    "Pioneer 3AT robot (Adept MobileRobots)."
+    "This all terrain four wheels drive robot is  equipped with a Sick LMS 291 lidar."
+    "It is programmed to perform a simple obstacle avoidance behavior based on the sensor data measured by the lidar."
+  ]
+  title "Pioneer 3AT"
+  lineScale 0.5
+}
+Viewpoint {
+  orientation 0.019846737606504888 -0.9898816857491252 -0.14050037446515493 5.999553978684199
+  position -7.980633304057086 -0.20193394618112637 9.163159900735486
+  follow "Pioneer_gpsCar"
+  followSmoothness 0
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+StraightRoadSegment {
+  translation 0 0 0.01
+  startingRoadBorderWidth 2
+  endingRoadBorderWidth 2
+  length 200
+}
+Forest {
+  translation 160.909 63.7243 0
+  rotation 0 0 1 0.89
+  shape [
+    -32 -60
+    100 -27
+    40 25
+  ]
+  density 0.5
+}
+Forest {
+  translation 137.338 170.478 0
+  rotation 0 0 -1 2.243
+  shape [
+    -40 -60
+    100 -27
+    40 25
+  ]
+  density 0.6
+}
+StraightRoadSegment {
+  translation -58 63 0.02
+  name "road_straight_4"
+  startingRoadBorderWidth 2
+  endingRoadBorderWidth 2
+  length 260
+}
+RectangleArena {
+  translation 78 0 0
+  floorSize 400 400
+  floorTileSize 3 3
+  floorAppearance SandyGround {
+    colorOverride 1 1 0.7
+  }
+  wallThickness 1.8
+  wallHeight 4.4
+  wallAppearance PBRAppearance {
+    baseColorMap ImageTexture {
+      url [
+        "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/default/worlds/textures/gray_brick_wall.jpg"
+      ]
+    }
+    roughness 1
+    metalness 0
+    textureTransform TextureTransform {
+      scale 56 28
+    }
+  }
+}
+Tractor {
+  translation -49.9566496518713 -38.62993940047359 0.4965527315333314
+  rotation -0.0009133328027917784 0.9999534055092355 -0.009610027766547064 0.09304490095319719
+  name "track"
+}
+AdvertisingBoard {
+  translation -96.31 -1.91 3.21
+  displayWidth 9
+  displayHeight 6
+}
+Pedestrian {
+  translation 17.8 4.49 1.44
+}
+Pedestrian {
+  translation 19.57 4.91 1.42
+  name "pedestrian(1)"
+}
+RobocupSoccerField {
+  translation 64.81 83.15 0
+  rotation 0 1 0 0
+  name "soccer_field_1"
+}
+RobocupSoccerField {
+  translation 64.81 98.36 0
+  rotation 0 1 0 0
+  name "soccer_field_2"
+}
+RobocupSoccerField {
+  translation 64.81 114.64 0
+  rotation 0 1 0 0
+  name "soccer_field_3"
+}
+BmwX5Simple {
+  translation -50 -31 0.4
+}
+BmwX5Simple {
+  translation -50 -34 0.4
+  name "vehicle_1"
+}
+StraightRoadSegment {
+  translation 100 37 0.06
+  rotation 0 0 1 1.5707996938995747
+  name "road_straight_6"
+  startingRoadBorderWidth 2.9
+  length 22
+}
+StraightRoadSegment {
+  translation 212 12 0.06
+  rotation 0 0 1 1.5707996938995747
+  name "road_straight_7"
+  startingRoadBorderWidth 1.2
+  length 42
+}
+Museum {
+  translation -35 -2 0
+}
+CurvedRoadSegment {
+  translation -58 53 0.02
+  rotation 0 0 1 1.5707996938995747
+  name "road_4"
+}
+CurvedRoadSegment {
+  translation 202 53 0.02
+  name "road_wandao_4"
+}
+Roundabout {
+  translation -68 -2 0.02
+  rotation 0 0 1 0.7853996938995746
+  name "roundabout(1)"
+}
+Forest {
+  translation 18 -46 0
+  rotation 0 0 1 3.141592653589793
+  shape [
+    -68 -14
+    23 -30
+    11 38
+  ]
+  density 1
+}
+Bench {
+  translation 2 6 0
+  rotation 0 0 1 -1.570795613280012
+}
+StraightRoadSegment {
+  translation -10 -20 0.06
+  rotation 0 0 1 1.5707996938995747
+  name "road_2"
+}
+StraightRoadSegment {
+  translation -68 -32 0.06
+  rotation 0 0 1 1.5707996938995747
+  name "road_straight_2"
+  length 17
+}
+StraightRoadSegment {
+  translation 100 -38 0.06
+  rotation 0 0 1 1.5707996938995747
+  name "road_straight_5"
+  startingRoadBorderWidth 2.9
+  length 34
+}
+StraightRoadSegment {
+  translation -68 11 0.06
+  rotation 0 0 1 1.5707996938995747
+  name "road_straight_3"
+  length 42
+}
+Roundabout {
+  translation 212 0 0.02
+  rotation 0 0 1 -0.79
+}
+BuildingUnderConstruction {
+  translation 100 -50 0
+}
+Forest {
+  translation 46 -17 0
+  shape [
+    -35 -8
+    33 -8
+    35 40
+  ]
+  density 1.2
+}
+CommercialBuilding {
+  translation 100 25 0
+}
+TheThreeTowers {
+  translation 230 0 0
+}
+SimpleTree {
+  translation 0 6 0
+}
+SimpleTree {
+  translation 11 6 0
+  name "tree_1"
+}
+DEF OBSTACLE_1 Solid {
+  translation 15.7489 -12.6243 1
+  children [
+    DEF OBSTACLE_SHAPE Shape {
+      appearance PBRAppearance {
+        baseColor 0.898039 0.898039 0.898039
+        baseColorMap ImageTexture {
+          url [
+            "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/default/worlds/textures/rock.jpg"
+          ]
+        }
+        roughness 1
+        metalness 0
+        textureTransform TextureTransform {
+          scale 1.5 1.5
+        }
+      }
+      geometry Cylinder {
+        radius 0.4
+        subdivision 20
+      }
+    }
+  ]
+  name "obstacle"
+  boundingObject USE OBSTACLE_SHAPE
+}
+DEF OBSTACLE_3 Solid {
+  translation 21.7282 24.6243 1
+  children [
+    USE OBSTACLE_SHAPE
+  ]
+  name "obstacle(3)"
+  boundingObject USE OBSTACLE_SHAPE
+}
+DEF PIONEER_3AT Pioneer3at {
+  translation 23.973770328439947 -1.3513525790005865 0.009180673564236463
+  rotation 0.00022707893772092985 0.0007049528066583994 0.9999997257383106 0.00708734
+  name "Pioneer_gpsCar"
+  controller "simple_follow"
+  extensionSlot [
+    Compass {
+      translation 0 0 0.3
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 1 0 0.4
+          }
+          geometry Cylinder {
+            height 0.05
+            radius 0.05
+          }
+        }
+      ]
+    }
+    GPS {
+      translation 0.16 -0.04 0.32
+      children [
+        Shape {
+          appearance PBRAppearance {
+          }
+          geometry Cone {
+            bottomRadius 0.05
+            height 0.1
+          }
+        }
+      ]
+    }
+  ]
+}
+CurvedRoadSegment {
+  translation 0 -10 0.01
+  rotation 0 0 1 1.5707996938995747
+  name "road_3"
+}
